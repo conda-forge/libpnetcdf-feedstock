@@ -15,6 +15,8 @@ package:
 source:
   url: https://parallel-netcdf.github.io/Release/pnetcdf-{{ version }}.tar.gz
   sha256: 439e359d09bb93d0e58a6e3f928f39c2eae965b6c97f64e67cd42220d6034f77
+  patches:
+    - patches/0001-update-subs.patch
 
 build:
   number: {{ build }}
