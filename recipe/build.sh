@@ -4,13 +4,18 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* ./scripts
 
 set -xe
 
-# for cross compiling using openmpi
-export OPAL_PREFIX=$PREFIX
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" && "$mpi" == "openmpi" ]]; then
+    # for cross compiling using openmpi
+    export OPAL_PREFIX=${PREFIX}
+    COMPILER_PREFIX=${BUILD_PREFIX}/bin
+else
+    COMPILER_PREFIX=${PREFIX}/bin
+fi
 
-# export MPICC=mpicc
-# export MPICXX=mpicxx
-# export MPIF77=mpifort
-# export MPIF90=mpifort
+export MPICC=${COMPILER_PREFIX}/mpicc
+export MPICXX=${COMPILER_PREFIX}/mpicxx
+export MPIF77=${COMPILER_PREFIX}/mpifort
+export MPIF90=${COMPILER_PREFIX}/mpifort
 
 ./configure --prefix=${PREFIX} \
     --with-mpi=${PREFIX} \
