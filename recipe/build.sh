@@ -5,6 +5,12 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* ./scripts
 set -xe
 
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" && "$mpi" == "openmpi" ]]; then
+    export OMPI_MCA_rmaps_base_oversubscribe=yes
+    export OMPI_MCA_btl=self,tcp
+    export OMPI_MCA_plm=isolated
+    export OMPI_MCA_rmaps_base_oversubscribe=yes
+    export OMPI_MCA_btl_vader_single_copy_mechanism=none
+    mpiexec="mpiexec --allow-run-as-root"
     # for cross compiling using openmpi
     export OPAL_PREFIX=${PREFIX}
     COMPILER_PREFIX=${BUILD_PREFIX}/bin
