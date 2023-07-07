@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libpnetcdf-feed
 
 Home: https://parallel-netcdf.github.io/
 
-Package license: custom
+Package license: LicenseRef-PnetCDF
 
 Summary: PnetCDF is a high-performance parallel I/O library for accessing Unidata's
 NetCDF, files in classic formats, specifically the formats of CDF-1, 2, and
