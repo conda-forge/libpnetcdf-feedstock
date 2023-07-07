@@ -39,6 +39,7 @@ requirements:
     - make
   host:
     - {{ mpi }}
+    - ssh  # for testing
 
 test:
   commands:
