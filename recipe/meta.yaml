@@ -58,7 +58,7 @@ test:
 
 about:
   home: https://parallel-netcdf.github.io/
-  license: custom
+  license: LicenseRef-PnetCDF
   license_file: COPYRIGHT
   summary: |
     PnetCDF is a high-performance parallel I/O library for accessing Unidata's
