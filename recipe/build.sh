@@ -24,8 +24,10 @@ export MPIF90=${COMPILER_PREFIX}/mpifort
 
 make
 
-# MPI tests aren't working in CI (not uncommon)
-# make check
-# make ptest
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
+    # MPI tests aren't working in CI (not uncommon)
+    make check
+    make ptest
+fi
 
 make install
