@@ -32,6 +32,7 @@ requirements:
   build:
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
     - {{ mpi }}  # [mpi == 'openmpi' and build_platform != target_platform]
