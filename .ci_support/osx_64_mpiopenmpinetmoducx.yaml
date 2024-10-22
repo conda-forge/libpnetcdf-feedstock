@@ -25,11 +25,11 @@ fortran_compiler_version:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 mpi:
-- mpich
+- openmpi
 mpich:
 - '4'
 netmod:
-- none
+- ucx
 openmpi:
 - '5'
 target_platform:
