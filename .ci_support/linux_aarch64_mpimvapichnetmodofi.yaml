@@ -36,8 +36,6 @@ openmpi:
 - '5'
 target_platform:
 - linux-aarch64
-ucx:
-- '1.17'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
