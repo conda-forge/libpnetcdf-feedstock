@@ -20,14 +20,19 @@ build:
   number: {{ build }}
   skip: true  # [win]
   {% set mpi_prefix = "mpi_" + mpi %}
+  {% set mpi_netmod = "" %}
+  {% if mpi == "mvapich" %}
+  {% set mpi_netmod = "_" + netmod %}
+  {% endif %}
+  {% if (mpi == "mvapich" and target_platform not in ["linux-64", "linux-aarch64", "linux-ppc64le"]) %}
+  skip: true
+  {% endif %}
+  {% set mpi_prefix = "mpi_" + mpi + mpi_netmod %}
   # add build string so packages can depend on mpi variants dependencies:
   # `PKG_NAME * mpi_mpich_*` for mpich
   # `PKG_NAME * mpi_*` for any mpi
   string: {{ mpi_prefix }}_h{{ PKG_HASH }}_{{ build }}
-
-  run_exports:
-    - {{ pin_subpackage('libpnetcdf', max_pin='x.x.x') }} {{ mpi_prefix }}_*
-
+  
 requirements:
   build:
     - gnuconfig  # [unix]
