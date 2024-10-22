@@ -2,7 +2,3 @@ mpi:
   - openmpi
   - mpich
   - mvapich
-
-netmod:
-  - ofi
-  - ucx
