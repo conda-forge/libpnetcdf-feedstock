@@ -26,6 +26,8 @@ mpi:
 - mpich
 mpich:
 - '4'
+netmod:
+- ucx
 openmpi:
 - '5'
 target_platform:
