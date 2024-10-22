@@ -14,6 +14,12 @@ jobs:
       osx_64_mpimpichnetmoducx:
         CONFIG: osx_64_mpimpichnetmoducx
         UPLOAD_PACKAGES: 'True'
+      osx_64_mpimvapichnetmodofi:
+        CONFIG: osx_64_mpimvapichnetmodofi
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpimvapichnetmoducx:
+        CONFIG: osx_64_mpimvapichnetmoducx
+        UPLOAD_PACKAGES: 'True'
       osx_64_mpiopenmpinetmodofi:
         CONFIG: osx_64_mpiopenmpinetmodofi
         UPLOAD_PACKAGES: 'True'
@@ -25,6 +31,12 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_arm64_mpimpichnetmoducx:
         CONFIG: osx_arm64_mpimpichnetmoducx
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_mpimvapichnetmodofi:
+        CONFIG: osx_arm64_mpimvapichnetmodofi
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_mpimvapichnetmoducx:
+        CONFIG: osx_arm64_mpimvapichnetmoducx
         UPLOAD_PACKAGES: 'True'
       osx_arm64_mpiopenmpinetmodofi:
         CONFIG: osx_arm64_mpiopenmpinetmodofi

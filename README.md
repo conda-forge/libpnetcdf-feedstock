@@ -172,6 +172,20 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_64_mpimvapichnetmodofi</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimvapichnetmodofi" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_mpimvapichnetmoducx</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimvapichnetmoducx" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_mpiopenmpinetmodofi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
@@ -197,6 +211,20 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_mpimpichnetmoducx" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_mpimvapichnetmodofi</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_mpimvapichnetmodofi" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_mpimvapichnetmoducx</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_mpimvapichnetmoducx" alt="variant">
                 </a>
               </td>
             </tr><tr>
