@@ -8,28 +8,16 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_mpimvapichnetmodofi:
-        CONFIG: linux_64_mpimvapichnetmodofi
+      linux_64_mpimvapich:
+        CONFIG: linux_64_mpimvapich
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_mpimvapichnetmoducx:
-        CONFIG: linux_64_mpimvapichnetmoducx
+      linux_aarch64_mpimvapich:
+        CONFIG: linux_aarch64_mpimvapich
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_mpimvapichnetmodofi:
-        CONFIG: linux_aarch64_mpimvapichnetmodofi
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_mpimvapichnetmoducx:
-        CONFIG: linux_aarch64_mpimvapichnetmoducx
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_mpimvapichnetmodofi:
-        CONFIG: linux_ppc64le_mpimvapichnetmodofi
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_mpimvapichnetmoducx:
-        CONFIG: linux_ppc64le_mpimvapichnetmoducx
+      linux_ppc64le_mpimvapich:
+        CONFIG: linux_ppc64le_mpimvapich
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360

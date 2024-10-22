@@ -26,12 +26,10 @@ mpi:
 - mvapich
 mpich:
 - '4'
-netmod:
-- ofi
 openmpi:
 - '5'
 target_platform:
-- linux-64
+- linux-ppc64le
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version

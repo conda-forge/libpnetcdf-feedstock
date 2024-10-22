@@ -32,45 +32,24 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_mpimvapichnetmodofi</td>
+              <td>linux_64_mpimvapich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimvapichnetmodofi" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimvapich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_mpimvapichnetmoducx</td>
+              <td>linux_aarch64_mpimvapich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimvapichnetmoducx" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_mpimvapich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_mpimvapichnetmodofi</td>
+              <td>linux_ppc64le_mpimvapich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_mpimvapichnetmodofi" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_mpimvapichnetmoducx</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_mpimvapichnetmoducx" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_mpimvapichnetmodofi</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_mpimvapichnetmodofi" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_mpimvapichnetmoducx</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_mpimvapichnetmoducx" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_mpimvapich" alt="variant">
                 </a>
               </td>
             </tr>
