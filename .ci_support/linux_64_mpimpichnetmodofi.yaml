@@ -26,6 +26,8 @@ mpi:
 - mpich
 mpich:
 - '4'
+netmod:
+- ofi
 openmpi:
 - '5'
 target_platform:
