@@ -28,7 +28,7 @@ export MPIF90=${COMPILER_PREFIX}/mpifort
     --enable-shared=yes \
     --enable-static=no
 
-make
+make -j"${CPU_COUNT}"
 
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
     # MPI tests aren't working in CI (not uncommon)
