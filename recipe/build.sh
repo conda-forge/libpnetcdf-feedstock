@@ -32,8 +32,8 @@ make -j"${CPU_COUNT}"
 
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
     # MPI tests aren't working in CI (not uncommon)
-    make check
-    # make ptest
+    # make check
+    make ptest
 fi
 
 make install
