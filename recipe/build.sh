@@ -33,6 +33,10 @@ make -j"${CPU_COUNT}"
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
     # MPI tests aren't working in CI (not uncommon)
     # make check
+    # To avoid issues with 
+    # WARNING: You are running 4 MPI processes on a processor that supports up to 2 cores. If you still 
+    # wish to run in oversubscribed mode, please set MVP_ENABLE_AFFINITY=0 and re-run the program
+    export MVP_ENABLE_AFFINITY=0
     make ptest
 fi
 
