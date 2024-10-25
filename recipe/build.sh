@@ -30,7 +30,8 @@ export MPIF90=${COMPILER_PREFIX}/mpifort
 
 make -j"${CPU_COUNT}"
 
-if [[ "$target_platform" == "linux-64" ]]; then
+# Skip tests if cross-compiling or emulating
+if [ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]; then
     # For other plartorms make check/ptest is not always working in CI (not uncommon)
     make check
 fi
