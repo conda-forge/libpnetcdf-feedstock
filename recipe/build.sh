@@ -24,16 +24,16 @@ export MPIF77=${COMPILER_PREFIX}/mpifort
 export MPIF90=${COMPILER_PREFIX}/mpifort
 
 ./configure --prefix=${PREFIX} \
-    --with-mpi=${PREFIX} \
-    --enable-shared=yes \
-    --enable-static=no
+            --with-mpi=${PREFIX} \
+            --enable-shared=yes \
+            --enable-static=no
 
-make
+make -j"${CPU_COUNT}"
 
-if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
-    # MPI tests aren't working in CI (not uncommon)
+# Skip tests if cross-compiling or emulating
+if [ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]; then
+    # For other plartorms make check/ptest is not always working in CI (not uncommon)
     make check
-    # make ptest
 fi
 
 make install
