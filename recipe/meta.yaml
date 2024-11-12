@@ -1,5 +1,5 @@
-{% set version = "1.13.0" %}
-{% set build = 1 %}
+{% set version = "1.14.0" %}
+{% set build = 0 %}
 
 # recipe-lint fails if mpi is undefined
 {% set mpi = mpi or 'mpich' %}
@@ -14,7 +14,7 @@ package:
 
 source:
   url: https://parallel-netcdf.github.io/Release/pnetcdf-{{ version }}.tar.gz
-  sha256: aba0f1c77a51990ba359d0f6388569ff77e530ee574e40592a1e206ed9b2c491
+  sha256: 575f189fb01c53f93b3d6ae0e506f46e19694807c81af0b9548e947995acf704
 
 build:
   number: {{ build }}
