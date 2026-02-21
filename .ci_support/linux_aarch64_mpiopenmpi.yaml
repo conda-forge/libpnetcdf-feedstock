@@ -6,8 +6,6 @@ c_stdlib:
 - sysroot
 c_stdlib_version:
 - '2.17'
-cdt_name:
-- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -23,11 +21,11 @@ fortran_compiler:
 fortran_compiler_version:
 - '14'
 libpnetcdf:
-- 1.14.0
+- 1.14.1
 mpi:
 - openmpi
 mpich:
-- '4'
+- '5'
 openmpi:
 - '5'
 target_platform:
