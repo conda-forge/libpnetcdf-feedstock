@@ -1,0 +1,77 @@
+schema_version: 1
+
+context:
+  version: "1.15.0"
+  build_number: 0
+
+package:
+  name: libpnetcdf
+  version: ${{ version }}
+
+source:
+  url: https://parallel-netcdf.github.io/Release/pnetcdf-${{ version }}.tar.gz
+  sha256: 39813fe91ec901c7cfca3212731edbb5201029ebf55caeaaaa08d9e33c6bad65
+
+build:
+  # add build string so packages can depend on mpi variants explicitly:
+  # `PKG_NAME * mpi_mpich_*` for mpich
+  # `PKG_NAME * mpi_*` for any mpi
+  # prioritize mpich via build number
+  number: ${{ build_number | int + 100 if mpi == "mpich" else build_number }}
+  string: ${{ mpi_prefix }}_h${{ hash }}_${{ build_number | int + 100 if mpi == "mpich" else build_number }}
+  variant:
+    # prefer 'mpich' over other mpi variants
+    down_prioritize_variant: ${{ 0 if mpi == "mpich" else 1 }}
+  skip: win or (mpi == "mvapich" and target_platform not in ["linux-64", "linux-aarch64", "linux-ppc64le"])
+
+requirements:
+  build:
+    - if: unix
+      then: gnuconfig
+    - ${{ compiler("c") }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler("cxx") }}
+    - ${{ compiler("fortran") }}
+    - if: mpi == "openmpi" and build_platform != target_platform
+      then: ${{ mpi }}
+    - m4
+    - make
+  host:
+    - ${{ mpi }}
+    - openssh  # for testing
+  run_exports:
+    - ${{ pin_subpackage("libpnetcdf", upper_bound="x.x.x") }}
+    - libpnetcdf * ${{ mpi_prefix }}_*
+
+tests:
+  - package_contents:
+      lib:
+        - pnetcdf
+  - script:
+      - pnetcdf-config --all
+      - test -f ${PREFIX}/lib/pkgconfig/pnetcdf.pc
+      - test -f ${PREFIX}/include/pnetcdf
+      - test -f ${PREFIX}/include/pnetcdf.h
+      - test -f ${PREFIX}/include/pnetcdf.mod
+      - test -f ${PREFIX}/include/pnetcdf.inc
+      - test ! -f ${PREFIX}/lib/libpnetcdf.a
+      - pnetcdf-config --has-c++      | grep -q yes
+      - pnetcdf-config --has-fortran  | grep -q yes
+      # disabled for now
+      # - pnetcdf-config --netcdf4      | grep -q enabled
+
+about:
+  license: LicenseRef-PnetCDF
+  license_file: COPYRIGHT
+  summary: |
+    PnetCDF is a high-performance parallel I/O library for accessing Unidata's
+    NetCDF, files in classic formats, specifically the formats of CDF-1, 2, and
+    5.
+  homepage: https://parallel-netcdf.github.io/
+  repository: https://github.com/Parallel-NetCDF/PnetCDF
+
+extra:
+  recipe-maintainers:
+    - xylar
+    - zklaus
+    - jedwards4b
