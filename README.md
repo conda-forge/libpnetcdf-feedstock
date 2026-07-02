@@ -11,7 +11,6 @@ Summary: PnetCDF is a high-performance parallel I/O library for accessing Unidat
 NetCDF, files in classic formats, specifically the formats of CDF-1, 2, and
 5.
 
-
 Development: https://github.com/Parallel-NetCDF/PnetCDF
 
 Current build status
@@ -39,17 +38,31 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>osx_64_mpimpich</td>
+              <td>osx_64_mpimpichmpi_prefixmpi_mpich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpich" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichmpi_prefixmpi_mpich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_mpiopenmpi</td>
+              <td>osx_64_mpiopenmpimpi_prefixmpi_openmpi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpi" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpimpi_prefixmpi_openmpi" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_mpimpichmpi_prefixmpi_mpich</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_mpimpichmpi_prefixmpi_mpich" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_mpiopenmpimpi_prefixmpi_openmpi</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19715&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpnetcdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_mpiopenmpimpi_prefixmpi_openmpi" alt="variant">
                 </a>
               </td>
             </tr>
