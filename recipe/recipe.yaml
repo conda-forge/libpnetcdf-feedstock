@@ -22,7 +22,7 @@ build:
   variant:
     # prefer 'mpich' over other mpi variants
     down_prioritize_variant: ${{ 0 if mpi == "mpich" else 1 }}
-  skip: win or (mpi == "mvapich" and target_platform not in ["linux-64", "linux-aarch64", "linux-ppc64le"])
+  skip: win or (mpi == "mvapich" and target_platform not in ["linux-64", "linux-aarch64"])
 
 requirements:
   build:
