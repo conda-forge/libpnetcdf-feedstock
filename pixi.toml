@@ -65,12 +65,6 @@ description = "Build libpnetcdf-feedstock with variant linux_ppc64le_mpimpichmpi
 [tasks."inspect-linux_ppc64le_mpimpichmpi_prefixmpi_mpich"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_mpimpichmpi_prefixmpi_mpich.yaml"
 description = "List contents of libpnetcdf-feedstock packages built for variant linux_ppc64le_mpimpichmpi_prefixmpi_mpich"
-[tasks."build-linux_ppc64le_mpimvapichmpi_prefixmpi_mvapich"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_mpimvapichmpi_prefixmpi_mvapich.yaml"
-description = "Build libpnetcdf-feedstock with variant linux_ppc64le_mpimvapichmpi_prefixmpi_mvapich directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_mpimvapichmpi_prefixmpi_mvapich"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_mpimvapichmpi_prefixmpi_mvapich.yaml"
-description = "List contents of libpnetcdf-feedstock packages built for variant linux_ppc64le_mpimvapichmpi_prefixmpi_mvapich"
 [tasks."build-linux_ppc64le_mpiopenmpimpi_prefixmpi_openmpi"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_mpiopenmpimpi_prefixmpi_openmpi.yaml"
 description = "Build libpnetcdf-feedstock with variant linux_ppc64le_mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
