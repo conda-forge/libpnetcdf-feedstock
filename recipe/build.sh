@@ -37,3 +37,14 @@ if [ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]; then
 fi
 
 make install
+
+# Upstream 1.15.0's configure leaks a redundant `-lmpi` into `pnetcdf-config --libs`
+# ("extra libraries"), whereas 1.14.1 (incl. when rebuilt against mpich 5) left it
+# empty. The shared lib already links libmpi and pnetcdf.pc omits it, but the stray
+# `-lmpi` breaks downstreams (e.g. ParallelIO) that treat `--libs` as the full link
+# line. Restore the pre-1.15.0 empty value. Anchored to `^LIBS=` so FLIBS/FCLIBS
+# (Fortran link flags) are untouched; temp-file rewrite is portable across seds.
+_pc="${PREFIX}/bin/pnetcdf-config"
+sed 's/^LIBS=.*/LIBS=""/' "${_pc}" > "${_pc}.tmp"
+cat "${_pc}.tmp" > "${_pc}"   # preserve exec permissions
+rm -f "${_pc}.tmp"

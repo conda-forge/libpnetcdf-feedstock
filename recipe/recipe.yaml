@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   version: "1.15.0"
-  build_number: 0
+  build_number: 1
 
 package:
   name: libpnetcdf
@@ -57,6 +57,10 @@ tests:
       - test ! -f ${PREFIX}/lib/libpnetcdf.a
       - pnetcdf-config --has-c++      | grep -q yes
       - pnetcdf-config --has-fortran  | grep -q yes
+      # `--libs` reports "extra" link libraries; for our shared-only build it must
+      # be empty (the dylib already links libmpi). Guards against the upstream
+      # 1.15.0 regression that leaked a redundant `-lmpi` and broke ParallelIO.
+      - '! pnetcdf-config --libs | grep -q -- -lmpi'
       # disabled for now
       # - pnetcdf-config --netcdf4      | grep -q enabled
 
