@@ -23,6 +23,15 @@ export MPICXX=${COMPILER_PREFIX}/mpicxx
 export MPIF77=${COMPILER_PREFIX}/mpifort
 export MPIF90=${COMPILER_PREFIX}/mpifort
 
+# The shipped configure (Autoconf 2.71) has an AC_HEADER_STDBOOL test that fails
+# under C23 (`bool` is a keyword, not a macro), which is the default for GCC 15.
+# The false negative leaves HAVE_STDBOOL_H unset, so test/common/testutils.h and
+# src/utils/ncmpidump/ncmpidump.h fall back to `enum {false=0, true=1};`, which
+# is a hard error when included from C++ (test/CXX). Autoconf 2.72 fixed the
+# test; until upstream regenerates configure, pre-seed the cache with the
+# correct answer (<stdbool.h> conforms on every platform we build).
+export ac_cv_header_stdbool_h=yes
+
 ./configure --prefix=${PREFIX} \
             --with-mpi=${PREFIX} \
             --enable-shared=yes \
