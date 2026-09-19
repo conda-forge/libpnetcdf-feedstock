@@ -1,8 +1,8 @@
 schema_version: 1
 
 context:
-  version: "1.15.0"
-  build_number: 1
+  version: "1.15.1"
+  build_number: 0
 
 package:
   name: libpnetcdf
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://parallel-netcdf.github.io/Release/pnetcdf-${{ version }}.tar.gz
-  sha256: 39813fe91ec901c7cfca3212731edbb5201029ebf55caeaaaa08d9e33c6bad65
+  sha256: 169c6adab08ba49154f14261225992601c573971b823c2066008a8ff57973f8a
 
 build:
   # add build string so packages can depend on mpi variants explicitly:
